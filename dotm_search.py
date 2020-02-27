@@ -19,8 +19,9 @@ def parse_arguments():
     when the program is called."""
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('search_text', action="store")
-    parser.add_argument('--dir', "-d", action="store",
+    parser.add_argument('search_text', action="store",
+                        help='the text we are looking for in the search directory')
+    parser.add_argument('--dir', "-d", action="store", help="directory to be searched",
                         default=os.getcwd())
     result = parser.parse_args()
 
